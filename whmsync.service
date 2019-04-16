@@ -1,0 +1,10 @@
+[Unit]
+Description=WHM synchronizer service copyright by saeed_lali
+After=cpanel.target
+
+[Service]
+Type=forking
+ExecStart= /bin/lsyncd /etc/rsyncd.lua
+
+[Install]
+WantedBy=multi-user.target
